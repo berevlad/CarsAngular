@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>VEHICLE NAME</th>
+      <th>VEHICLE ID</th>
+      <th>REMOVE</th>
+    </tr>
+    </thead>
+    <tbody class="vehicle">
+    <tr *ngFor="let vehicle of vehicles" (click)="onSelect(vehicle)"
+        [class.selected]="vehicle === selectedVehicle" class="vehicle">
+      <td>{{vehicle.id}}</td>
+      <td>{{vehicle.name}}</td>
+      <td>{{vehicle.vehicleId}}</td>
+      <button class="glyphicon glyphicon-remove" (click)="deleteVehicle(vehicle); $event.stopPropagation()"></button>
+    </tr>
+    <tbody>
+  </table>
+  <div *ngIf="selectedVehicle" class="selected-vehicle">
+    <h3>{{selectedVehicle.name}} is current vehicle</h3>
+    <button (click)="gotoDetail()" class="btn btn-default">View Details</button>
+  </div>
+  <button class="btn btn-default" routerLink="/createVehicle" routerLinkActive="active">Create Vehicle</button>
+</div>
+

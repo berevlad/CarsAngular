@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>List of users</h2>
+  <table class="table table-hover ">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users" (click)="onSelect(user)"
+        [class.selected]="user === selectedUser" class="users">
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteUser(user); $event.stopPropagation()">x</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+    <div *ngIf="selectedUser">
+      <h3>{{selectedUser.firstName}} is current user</h3>
+      <button class="btn btn-default" (click)="gotoDetail()">View details</button>
+    </div>
+    <button class="btn btn-default" routerLink="/createUser" routerLinkActive="active">Create user</button>
+</div>

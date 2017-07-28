@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>My Routes</h2>
+  <div>
+    <label>Route name:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" #Name/>
+    <label>Vehicul:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" #vehicleId/>
+    <label>Detaliati ruta:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" #Rt/>
+    <br>
+    <span class="glyphicon glyphicon-plus" (click)="refresh()"
+          (click)="add(Name.value, vehicleId.value, Rt.value);">
+
+  </span>
+  </div>
+  <br>
+  <table border="1" width="70%">
+    <tr>
+      <th>Id-ul Rutei</th>
+      <th>Numele rutei</th>
+      <th>Vehiculul</th>
+      <th>Detalierea rutei</th>
+      <th>Data</th>
+    </tr>
+    <tr *ngFor="let route of routes"
+        [class.selected]="route === selectedRoute">
+      <td>{{route.id}}</td>
+      <td>{{route.name}}</td>
+      <td>{{route.vehicleId}}</td>
+      <td>{{route.rt}}</td>
+      <td>{{route.date}}</td>
+      <td><span class="glyphicon glyphicon-trash"
+                (click)="deleteRoute(route); $event.stopPropagation()">
+    </span></td>
+      <td><span class="glyphicon glyphicon-pencil" (click)="gotoDetail(route)"></span>
+      </td>
+    </tr>
+  </table>
+</div>

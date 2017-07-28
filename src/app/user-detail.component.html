@@ -1,0 +1,51 @@
+<div class="container">
+  <div *ngIf="user">
+  <h2 class="header">{{user.firstName}} {{user.lastName}} details</h2>
+  <form class="form-horizontal">
+    <fieldset>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Id</label>
+        <div class="col-lg-10">
+          <input class="form-control" placeholder="{{user.id}}" readonly="readonly">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">First name</label>
+        <div class="col-lg-10">
+          <input [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="First name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Last name</label>
+        <div class="col-lg-10">
+          <input [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Password</label>
+        <div class="col-lg-10">
+          <input [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Email</label>
+        <div class="col-lg-10">
+          <input [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Date</label>
+        <div class="col-lg-10">
+          <input class="form-control" placeholder="{{user.date}}" readonly="readonly">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button class="btn btn-primary" (click)="updateUser()">Update</button>
+          <button class="btn btn-default" (click)="goBack()">Back</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  </div>
+</div>

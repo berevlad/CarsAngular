@@ -1,0 +1,14 @@
+.container {
+  margin-top: 4%;
+}
+
+.users.selected {
+  background-color: #BBD8DC !important;
+  color: dimgray;
+}
+
+.btn {
+  float: left;
+  margin-left: 1%;
+}
+

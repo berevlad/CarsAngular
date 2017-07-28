@@ -1,0 +1,8 @@
+<div class="container">
+  <label class="labelname">Name:</label>
+  <input type="text" name="name" id="name" placeholder="Vehicle Name" #name> <br>
+  <label>Vehicle ID:</label>
+  <input type="text" name="vehicleId" id="vehicleId" placeholder="Vehicle ID" #vehicleId> <br>
+  <button (click)="refresh()" (click)="add(name.value , vehicleId.value)" class="savebutton">Save</button>
+  <button class="backbutton" (click)="goBack()">Cancel</button>
+</div>

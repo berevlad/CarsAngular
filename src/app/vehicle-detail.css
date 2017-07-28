@@ -1,0 +1,43 @@
+.backbutton {
+  background-color: #676767;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 7px;
+}
+.backbutton:hover:not(.active) {
+  background-color: #7b7b7b;
+}
+.updatebutton {
+  background-color: #676767;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 6px;
+}
+.updatebutton:hover:not(.active) {
+  background-color: #7b7b7b;
+}
+.labelname {
+  margin-left: 29px;
+  margin-bottom: 10px;
+}
+.labelid {
+  margin-left: 53px;
+  margin-right: 2%;
+}
+.vehicle-details {
+  background-color: #ffffff;
+  margin: auto;
+  width: 80%;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  padding: 40px;
+  margin-top: 20px;
+}
+.vehicle-details label {
+  margin-right: 1%;
+}

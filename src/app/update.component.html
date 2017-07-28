@@ -1,0 +1,17 @@
+<div *ngIf="routee">
+  <h2>Route: {{routee.id}}</h2>
+  <div>
+    <label>Name: </label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="routee.name" placeholder="name"/>
+    <label>Vehicul:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="routee.vehicleId" placeholder="vehicleId"/>
+    <label>Detalierea rutei:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="routee.rt" placeholder="rt"/>
+    <label>Data:</label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="routee.date" placeholder="date"/>
+    <br>
+  </div>
+
+    <button  (click)="save()">Update</button>&nbsp;&nbsp;
+  &nbsp; &nbsp; <button (click)="goBack()">Back</button>
+</div>

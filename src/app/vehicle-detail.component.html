@@ -1,0 +1,13 @@
+<div *ngIf="vehicle" class="vehicle-details">
+  <h2>{{vehicle.name}} details!</h2>
+  <div><label class="labelid">ID: </label>{{vehicle.id}}</div>
+  <div>
+    <label class="labelname">Name: </label>
+    <input [(ngModel)]="vehicle.name"/><br>
+    <label>Vehicle ID: </label>
+    <input [(ngModel)]="vehicle.vehicleId"/><br>
+  </div>
+  <button (click)="save()" class="updatebutton">Update</button>
+  <button (click)="goBack()" class="backbutton">Back</button>
+</div>
+

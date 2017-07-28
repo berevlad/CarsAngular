@@ -1,0 +1,12 @@
+<div *ngIf="logs" class="container">
+  <h2>Log: {{logs.id}}</h2>
+  <hr class="style1">
+  <div class="form-inline">
+    <label>user_id: </label>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="logs.userId" placeholder="user_id"/>
+    <input class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="logs.vehicleId" placeholder="vehicle_id"/>
+  </div>
+  <br>
+  <button (click)="save()" class="btn btn-default">Update</button>
+  <button (click)="goBack()" class="btn btn-default">Back</button>
+</div>
